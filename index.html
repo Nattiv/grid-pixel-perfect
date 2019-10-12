@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onload="renderImgs()">
 
     <header>
         <section class="container header-wrapper flex align-center">
@@ -68,15 +68,14 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor...</p>
 
                 <a href="#" class="more">Continue Reading</a>
+                <div class="input-img">
+                    <input class="img-url" placeholder="Insert image url here" />
+                    <input class="img-txt" placeholder="Insert text here" />
+                    <button onclick="onAddPhoto()">Add photo</button>
+                </div>
             </div>
-
-            <div class="images images-wrapper grid">
-                <h2 class="image-item placeholder">CSS Grid Comes Here!</h2>
-                <h2 class="image-item placeholder">1</h2>
-                <h2 class="image-item placeholder item-2 ">2</h2>
+            <div class="images">
             </div>
-
-
         </section>
 
         <section class="pager main-pager container flex space-between">
@@ -87,7 +86,6 @@
     </main>
 
     <footer>
-
         <section class="container">
             <div class="logo">
                 Blogin
@@ -95,18 +93,12 @@
             </div>
             <small>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</small>
             <i class="fab fa-facebook-square"></i>
-                </section>
-
-
+        </section>
     </footer>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
 
-    <script>
-        function toggleMenu() {
-            var mainMenu = document.getElementById('mainMenu');
-            console.log(mainMenu);
-            mainMenu.classList.toggle('open');
-        }
-    </script>
+
 </body>
 
 </html>
